@@ -1,6 +1,9 @@
 # Requires python3, jq and geohash2 library
 # pip3 install geohash2
 # sudo apt-get install jq
+# https://github.com/vi/websocat
+# wget https://github.com/vi/websocat/releases/download/v1.9.0/websocat_linux64
+# chmod 755 websocat_linux64
 mdcat2json () {
         jsonstr=$1
         jsonstr=`echo $jsonstr | \
