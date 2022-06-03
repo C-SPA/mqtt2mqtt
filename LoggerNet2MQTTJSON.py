@@ -2,11 +2,6 @@ import glob
 import os
 import csv, json, sys  
 import pandas as pd
-# python 3.6
-
-import random
-import time
-
 from paho.mqtt import client as mqtt_client
 #mosquitto_sub -h cfsr.bse.vt.edu -t usdajson -u usdadev -P U5DAPa55
 
@@ -42,12 +37,9 @@ def publish(client,mqttmsg):
     else:
         print(f"Failed to send message to topic {topic}")
 
-list_of_files = glob.glob('C:/Campbellsci/LoggerNet/CR*.dat') # * means all if need specific format then *.csv
+list_of_files = glob.glob('C:/Campbellsci/LoggerNet/CR*.dat') # Shall we put the base name into the regex?
 latest_file = max(list_of_files, key=os.path.getctime)
-#print(latest_file)
 skipHeaderDf =pd.read_csv(latest_file, skiprows=[0,2,3])
-#print(skipHeaderDf)
-#reader = csv.DictReader(skipHeaderDf)
 
 result = skipHeaderDf.to_json(orient="split")
 parsed = json.loads(result)
