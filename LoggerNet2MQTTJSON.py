@@ -1,3 +1,5 @@
+# pip3 install pandas
+# pip3 install paho-mqtt
 import glob
 import os
 import csv, json, sys, random, time 
