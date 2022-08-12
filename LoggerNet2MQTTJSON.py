@@ -1,7 +1,7 @@
 # pip3 install pandas
 # pip3 install paho-mqtt
 import glob
-import os
+import os, sys
 import csv, json, sys, random, time 
 import pandas as pd
 from paho.mqtt import client as mqtt_client
@@ -39,8 +39,9 @@ def publish(client,mqttmsg):
     else:
         print(f"Failed to send message to topic {topic}")
 
-list_of_files = glob.glob('C:/Campbellsci/LoggerNet/CR*.dat') # Shall we put the base name into the regex?
-latest_file = max(list_of_files, key=os.path.getctime)
+#list_of_files = glob.glob('C:/Campbellsci/LoggerNet/CR*.dat') # Shall we put the base name into the regex?
+#latest_file = max(list_of_files, key=os.path.getctime)
+latest_file = sys.argv[1]
 skipHeaderDf =pd.read_csv(latest_file, skiprows=[0,2,3])
 
 result = skipHeaderDf.to_json(orient="split")
