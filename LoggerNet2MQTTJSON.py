@@ -37,7 +37,11 @@ def publish(client,mqttmsg):
     if status == 0:
         print(f"Send `{msg}` to topic `{topic}`")
     else:
-        print(f"Failed to send message to topic {topic}")
+        # Open a file with access mode 'a'
+        file_object = open('mqtt_pub.log', 'a')
+        file_object.write(f"Failed to send message to topic {topic} because {status}")
+        file_object.close()
+        print(f"\nFailed to send message to topic {topic}")
 
 #list_of_files = glob.glob('C:/Campbellsci/LoggerNet/CR*.dat') # Shall we put the base name into the regex?
 #latest_file = max(list_of_files, key=os.path.getctime)
