@@ -25,7 +25,7 @@ def connect_mqtt():
     client = mqtt_client.Client(client_id)
     client.username_pw_set(username, password)
     client.on_connect = on_connect
-    client.connect(broker, port)
+    client.connect(broker, port, keepalive=15)
     return client
 
 def publish(client,mqttmsg):
