@@ -49,7 +49,7 @@ skipHeaderDf =pd.read_csv(latest_file, skiprows=[0,2,3])
 
 result = skipHeaderDf.to_json(orient="split")
 parsed = json.loads(result)
-mqttmsg=json.dumps(parsed, indent=4)
+mqttmsg=json.dumps(parsed)
 print(mqttmsg)
 client = connect_mqtt()
 client.loop_start()
