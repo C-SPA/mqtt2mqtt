@@ -29,7 +29,6 @@ def connect_mqtt():
     return client
 
 def publish(client,mqttmsg):
-    time.sleep(1)
     msg = f"[{mqttmsg}]"
     result = client.publish(topic, msg)
     # result: [0, 1]
