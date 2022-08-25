@@ -55,3 +55,5 @@ print(mqttmsg)
 client = connect_mqtt()
 client.loop_start()
 publish(client,mqttmsg)
+client.loop_stop()    #Stop loop 
+client.disconnect() # disconnect
