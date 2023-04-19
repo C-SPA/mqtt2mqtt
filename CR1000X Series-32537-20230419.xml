@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:\Campbellsci\Lib\DevConfigLib\en\v2/summary.xsl"?>
+<device-config device-type="78" major-version="5" minor-version="3" model-no="CR1000X Series" serial-no="32537" timestamp="2023-04-19T04:01:56.813">
+  <setting id="0" name="OS Version">
+    <component name="OS Version" repeat-count="0">CR1000X.Std.05.01&#10;</component>
+  </setting>
+  <setting id="1" name="Serial Number">
+    <component name="Serial Number" repeat-count="0">32537</component>
+  </setting>
+  <setting id="2" name="Station Name">
+    <component name="Station Name" repeat-count="0">3002&#10;</component>
+  </setting>
+  <setting id="3" name="PakBus Address">
+    <component name="PakBus Address" repeat-count="0">3002</component>
+  </setting>
+  <setting id="4" name="Security">
+    <component name="Security Level 1" repeat-count="0">0</component>
+    <component name="Security Level 2" repeat-count="0">0</component>
+    <component name="Security Level 3" repeat-count="0">0</component>
+  </setting>
+  <setting id="95" name="Routes">
+    <component name="Port Number" repeat-count="0">4</component>
+    <component name="Via Neighbor Address" repeat-count="0">3001</component>
+    <component name="PakBus Address" repeat-count="0">3001</component>
+    <component name="Response Time" repeat-count="0">1000</component>
+  </setting>
+  <setting id="89" name="CS I/O IP Address #1">
+    <component name="CS I/O IP Address #1" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="91" name="CS I/O Subnet Mask #1">
+    <component name="CS I/O Subnet Mask #1" repeat-count="0">255.255.255.0</component>
+  </setting>
+  <setting id="90" name="CS I/O Default Gateway #1">
+    <component name="CS I/O Default Gateway #1" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="92" name="CS I/O IP Address #2">
+    <component name="CS I/O IP Address #2" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="94" name="CS I/O Subnet Mask #2">
+    <component name="CS I/O Subnet Mask #2" repeat-count="0">255.255.255.0</component>
+  </setting>
+  <setting id="93" name="CS I/O Default Gateway #2">
+    <component name="CS I/O Default Gateway #2" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="56" name="PPP Interface">
+    <component name="PPP Interface" repeat-count="0">0</component>
+    <component name="PPP IP Address" repeat-count="0">0.0.0.0</component>
+    <component name="Reserved" repeat-count="0">&#10;</component>
+    <component name="PPP User Name" repeat-count="0">&#10;</component>
+    <component name="PPP Password" repeat-count="0">&#10;</component>
+    <component name="PPP Dial" repeat-count="0">&#10;</component>
+    <component name="PPP Dial Response" repeat-count="0">CONNECT&#10;</component>
+  </setting>
+  <setting id="85" name="PakBus/TCP Password">
+    <component name="PakBus/TCP Password" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="96" name="PakBus Encryption Key">
+    <component name="PakBus Encryption Key" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="380" name="Maximum TCP Segment Size">
+    <component name="Maximum TCP Segment Size" repeat-count="0">1380</component>
+  </setting>
+  <setting id="385" name="GOES Settings">
+    <component name="Goes Radio Enabled" repeat-count="0">0</component>
+    <component name="Com Port" repeat-count="0">1</component>
+    <component name="Self-Timed Message Window (seconds)" repeat-count="0">10</component>
+    <component name="Random Transmission Repeat Count" repeat-count="0">2</component>
+    <component name="Platform ID" repeat-count="0">00000000&#10;</component>
+    <component name="Random Transmission Baud Rate" repeat-count="0">300</component>
+    <component name="Random Transmission Channel" repeat-count="0">0</component>
+    <component name="Self-Timed Baud Rate" repeat-count="0">300</component>
+    <component name="Self-Timed Channel" repeat-count="0">0</component>
+    <component name="Random Transmission Interval" repeat-count="0">01:00:00&#10;</component>
+    <component name="Self-Timed Transmission Interval" repeat-count="0">00:01:00:00&#10;</component>
+    <component name="Self-Timed Transmission Offset" repeat-count="0">00:00:00&#10;</component>
+  </setting>
+  <setting id="410" name="MQTT Enable">
+    <component name="MQTT Enable" repeat-count="0">3</component>
+  </setting>
+  <setting id="399" name="Campbell Cloud Account ID">
+    <component name="Campbell Cloud Account ID" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="400" name="MQTT Broker URL">
+    <component name="MQTT Broker URL" repeat-count="0">cfsr.bse.vt.edu&#10;</component>
+  </setting>
+  <setting id="411" name="MQTT Connection">
+    <component name="MQTT Connection" repeat-count="0">0</component>
+  </setting>
+  <setting id="401" name="Port No">
+    <component name="Port No" repeat-count="0">1883</component>
+  </setting>
+  <setting id="395" name="Status Info Publish Interval (Minutes)">
+    <component name="Status Info Publish Interval (Minutes)" repeat-count="0">5</component>
+  </setting>
+  <setting id="396" name="State Publish Interval (Minutes)">
+    <component name="State Publish Interval (Minutes)" repeat-count="0">5</component>
+  </setting>
+  <setting id="405" name="Keep Alive">
+    <component name="Keep Alive" repeat-count="0">300</component>
+  </setting>
+  <setting id="402" name="MQTT Client ID">
+    <component name="MQTT Client ID" repeat-count="0">CR1000X_TUC_Remote2&#10;</component>
+  </setting>
+  <setting id="403" name="MQTT User Name">
+    <component name="MQTT User Name" repeat-count="0">usdadev&#10;</component>
+  </setting>
+  <setting id="404" name="MQTT Password">
+    <component name="MQTT Password" repeat-count="0">U5DAPa55&#10;</component>
+  </setting>
+  <setting id="406" name="MQTT Last Will Topic">
+    <component name="MQTT Last Will Topic" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="407" name="MQTT Last Will Message">
+    <component name="MQTT Last Will Message" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="204" name="IP Network Interfaces Enabled">
+    <component name="Reserved" repeat-count="0">3</component>
+    <component name="CS I/O IP #1 Interface Enabled" repeat-count="0">1</component>
+    <component name="CS I/O IP #2 Interface Enabled" repeat-count="0">1</component>
+    <component name="Reserved" repeat-count="0">8</component>
+  </setting>
+  <setting id="408" name="MQTT Last Will topic publish QoS">
+    <component name="MQTT Last Will topic publish QoS" repeat-count="0">0</component>
+  </setting>
+  <setting id="7" name="Baud Rate RS232">
+    <component name="Baud Rate RS232" repeat-count="0">-115200</component>
+  </setting>
+  <setting id="17" name="Beacon Interval RS232">
+    <component name="Beacon Interval RS232" repeat-count="0">0</component>
+  </setting>
+  <setting id="27" name="Verify Interval RS232">
+    <component name="Verify Interval RS232" repeat-count="0">0</component>
+  </setting>
+  <setting id="37" name="Neighbors Allowed RS232" />
+  <setting id="148" name="Ethernet Power">
+    <component name="Ethernet Power" repeat-count="0">2</component>
+  </setting>
+  <setting id="409" name="MQTT Last Will Message Retained by Broker">
+    <component name="MQTT Last Will Message Retained by Broker" repeat-count="0">1</component>
+  </setting>
+  <setting id="51" name="Ethernet IP Address">
+    <component name="Ethernet IP Address" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="398" name="MQTT Base Topic">
+    <component name="MQTT Base Topic" repeat-count="0">cs/v1/&#10;</component>
+  </setting>
+  <setting id="53" name="Ethernet Subnet Mask">
+    <component name="Ethernet Subnet Mask" repeat-count="0">255.255.255.0</component>
+  </setting>
+  <setting id="52" name="Ethernet Default Gateway">
+    <component name="Ethernet Default Gateway" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="388" name="DNS Name Servers">
+    <component name="DNS Server Address 1" repeat-count="0" />
+    <component name="DNS Server Address 2" repeat-count="0" />
+  </setting>
+  <setting id="389" name="Pakbus Web URL">
+    <component name="Pakbus Web URL" repeat-count="0">&#10;</component>
+    <component name="Pakbus Web Host" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="8" name="Baud Rate ME">
+    <component name="Baud Rate ME" repeat-count="0">-115200</component>
+  </setting>
+  <setting id="18" name="Beacon Interval ME">
+    <component name="Beacon Interval ME" repeat-count="0">0</component>
+  </setting>
+  <setting id="28" name="Verify Interval ME">
+    <component name="Verify Interval ME" repeat-count="0">0</component>
+  </setting>
+  <setting id="38" name="Neighbors Allowed ME" />
+  <setting id="376" name="Ping Keep Alive URL">
+    <component name="Ping Keep Alive URL" repeat-count="0">www.google.com</component>
+  </setting>
+  <setting id="375" name="Ping Keep Alive Timeout Value">
+    <component name="Ping Keep Alive Timeout Value" repeat-count="0">0</component>
+  </setting>
+  <setting id="20" name="Beacon Interval SDC7">
+    <component name="Beacon Interval SDC7" repeat-count="0">0</component>
+  </setting>
+  <setting id="30" name="Verify Interval SDC7">
+    <component name="Verify Interval SDC7" repeat-count="0">0</component>
+  </setting>
+  <setting id="40" name="Neighbors Allowed SDC7" />
+  <setting id="67" name="COM SDC7 Info">
+    <component name="COM SDC7 Info" repeat-count="0">RF451.02.00&#10;</component>
+  </setting>
+  <setting id="59" name="Ethernet Network Addresses">
+    <component name="Ethernet Network Addresses" repeat-count="0">No default network.&#13;&#10;Ethernet is powered down.&#13;&#10;MAC: 00d02c067f19&#13;&#10;IP: 0.0.0.0&#13;&#10;mask: 0.0.0.0&#13;&#10;gw: 0.0.0.0&#13;&#10;IPv6 local: FE80::2D0:2CFF:FE06:7F19&#13;&#10;dns: 208.67.222.222&#13;&#10;&#10;</component>
+  </setting>
+  <setting id="202" name="PPP Network Addresses">
+    <component name="PPP Network Addresses" repeat-count="0">No default network.&#13;&#10;PPP is not configured.&#13;&#10;&#10;</component>
+  </setting>
+  <setting id="203" name="CS I/O Network Addresses">
+    <component name="CS I/O Network Addresses" repeat-count="0">No default network.&#13;&#10;CSIO(1) is not configured.&#13;&#10;CSIO(2) is not configured.&#13;&#10;&#10;</component>
+  </setting>
+  <setting id="21" name="Beacon Interval SDC8">
+    <component name="Beacon Interval SDC8" repeat-count="0">0</component>
+  </setting>
+  <setting id="31" name="Verify Interval SDC8">
+    <component name="Verify Interval SDC8" repeat-count="0">0</component>
+  </setting>
+  <setting id="41" name="Neighbors Allowed SDC8" />
+  <setting id="74" name="Beacon Interval SDC10">
+    <component name="Beacon Interval SDC10" repeat-count="0">0</component>
+  </setting>
+  <setting id="77" name="Verify Interval SDC10">
+    <component name="Verify Interval SDC10" repeat-count="0">0</component>
+  </setting>
+  <setting id="80" name="Neighbors Allowed SDC10" />
+  <setting id="75" name="Beacon Interval SDC11">
+    <component name="Beacon Interval SDC11" repeat-count="0">0</component>
+  </setting>
+  <setting id="78" name="Verify Interval SDC11">
+    <component name="Verify Interval SDC11" repeat-count="0">0</component>
+  </setting>
+  <setting id="81" name="Neighbors Allowed SDC11" />
+  <setting id="73" name="Baud Rate COMSDC">
+    <component name="Baud Rate COMSDC" repeat-count="0">115200</component>
+  </setting>
+  <setting id="107" name="Beacon Interval COMUSB">
+    <component name="Beacon Interval COMUSB" repeat-count="0">0</component>
+  </setting>
+  <setting id="117" name="Verify Interval COMUSB">
+    <component name="Verify Interval COMUSB" repeat-count="0">0</component>
+  </setting>
+  <setting id="127" name="Neighbors Allowed COMUSB" />
+  <setting id="98" name="Baud Rate COMC1">
+    <component name="Baud Rate COMC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="108" name="Beacon Interval COMC1">
+    <component name="Beacon Interval COMC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="118" name="Verify Interval COMC1">
+    <component name="Verify Interval COMC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="128" name="Neighbors Allowed COMC1" />
+  <setting id="99" name="Baud Rate COMC3">
+    <component name="Baud Rate COMC3" repeat-count="0">0</component>
+  </setting>
+  <setting id="109" name="Beacon Interval COMC3">
+    <component name="Beacon Interval COMC3" repeat-count="0">0</component>
+  </setting>
+  <setting id="119" name="Verify Interval COMC3">
+    <component name="Verify Interval COMC3" repeat-count="0">0</component>
+  </setting>
+  <setting id="129" name="Neighbors Allowed COMC3" />
+  <setting id="100" name="Baud Rate COMC5">
+    <component name="Baud Rate COMC5" repeat-count="0">0</component>
+  </setting>
+  <setting id="152" name="Configuration COMC5">
+    <component name="Configuration COMC5" repeat-count="0">0</component>
+  </setting>
+  <setting id="110" name="Beacon Interval COMC5">
+    <component name="Beacon Interval COMC5" repeat-count="0">0</component>
+  </setting>
+  <setting id="120" name="Verify Interval COMC5">
+    <component name="Verify Interval COMC5" repeat-count="0">0</component>
+  </setting>
+  <setting id="130" name="Neighbors Allowed COMC5" />
+  <setting id="101" name="Baud Rate COMC7">
+    <component name="Baud Rate COMC7" repeat-count="0">0</component>
+  </setting>
+  <setting id="153" name="Configuration COMC7">
+    <component name="Configuration COMC7" repeat-count="0">0</component>
+  </setting>
+  <setting id="111" name="Beacon Interval COMC7">
+    <component name="Beacon Interval COMC7" repeat-count="0">0</component>
+  </setting>
+  <setting id="121" name="Verify Interval COMC7">
+    <component name="Verify Interval COMC7" repeat-count="0">0</component>
+  </setting>
+  <setting id="131" name="Neighbors Allowed COMC7" />
+  <setting id="54" name="PakBus/TCP Service Port">
+    <component name="PakBus/TCP Service Port" repeat-count="0">6785</component>
+  </setting>
+  <setting id="65" name="PakBus/TCP Client Connections" />
+  <setting id="377" name="Trusted Hosts" />
+  <setting id="60" name="TCP/IP Services Enabled">
+    <component name="HTTP Enabled" repeat-count="0">1</component>
+    <component name="Telnet Enabled" repeat-count="0">0</component>
+    <component name="FTP Enabled" repeat-count="0">0</component>
+    <component name="Ping Enabled" repeat-count="0">0</component>
+    <component name="HTTPS Enabled" repeat-count="0">0</component>
+    <component name="Pakbus TCP Enabled" repeat-count="0">1</component>
+    <component name="PakBus/WS Enabled" repeat-count="0">0</component>
+  </setting>
+  <setting id="58" name="FTP User Name">
+    <component name="FTP User Name" repeat-count="0">&#10;</component>
+    <component name="FTP Password" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="63" name="HTTP Service Port">
+    <component name="HTTP Service Port" repeat-count="0">80</component>
+  </setting>
+  <setting id="149" name="HTTPS Service Port">
+    <component name="HTTPS Service Port" repeat-count="0">443</component>
+  </setting>
+  <setting id="64" name="FTP Service Port">
+    <component name="FTP Service Port" repeat-count="0">21</component>
+  </setting>
+  <setting id="86" name="UTC Offset">
+    <component name="UTC Offset" repeat-count="0">-1</component>
+  </setting>
+  <setting id="151" name="NTP Server">
+    <component name="NTP Server" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="5" name="Is Router">
+    <component name="Is Router" repeat-count="0">0</component>
+  </setting>
+  <setting id="6" name="Communication Allocation">
+    <component name="Communication Allocation" repeat-count="0">50</component>
+  </setting>
+  <setting id="83" name="Route Filters" />
+  <setting id="138" name="Beacon Interval Internet">
+    <component name="Beacon Interval Internet" repeat-count="0">0</component>
+  </setting>
+  <setting id="139" name="Verify Interval Internet">
+    <component name="Verify Interval Internet" repeat-count="0">0</component>
+  </setting>
+  <setting id="195" name="USB Virtual Ethernet Address (RNDIS)">
+    <component name="USB Virtual Ethernet Address (RNDIS)" repeat-count="0">0.0.0.0</component>
+  </setting>
+  <setting id="47" name="Central Routers" />
+  <setting id="55" name="USR: Drive Size">
+    <component name="USR: Drive Size" repeat-count="0">0</component>
+  </setting>
+  <setting id="50" name="Files Manager" />
+  <setting id="84" name="Include File Name">
+    <component name="Include File Name" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="49" name="Max Packet Size">
+    <component name="Max Packet Size" repeat-count="0">1000</component>
+  </setting>
+  <setting id="61" name="RS232 power, handshaking">
+    <component name="RS232 Always On" repeat-count="0">0</component>
+    <component name="RS232 Hardware Handshaking Buffer Size" repeat-count="0">0</component>
+    <component name="RS232 Hardware Handshaking Timeout" repeat-count="0">0</component>
+  </setting>
+  <setting id="87" name="SSL Enabled">
+    <component name="Transport Layer Security (TLS) Enabled" repeat-count="0">0</component>
+    <component name="IP Broadcast Filtered" repeat-count="0">0</component>
+    <component name="Reserved" repeat-count="0">0</component>
+  </setting>
+  <setting id="208" name="Konect">
+    <component name="Konect ID" repeat-count="0">&#10;</component>
+    <component name="Konect Secret Key" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="207" name="HTTP Header">
+    <component name="HTTP Header" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="57" name="IP Trace">
+    <component name="IP Trace COM Port" repeat-count="0">0</component>
+    <component name="IP Trace Code" repeat-count="0">0</component>
+  </setting>
+  <setting id="209" name="PCAP">
+    <component name="PCAP network interface" repeat-count="0">0</component>
+    <component name="PCAP file name" repeat-count="0">&#10;</component>
+    <component name="PCAP file size" repeat-count="0">0</component>
+  </setting>
+  <setting id="206" name="More Settings">
+    <component name="Delete CardOut Data Files if CardOut Data Table Mismatch" repeat-count="0">0</component>
+    <component name="USB Enumerate" repeat-count="0">0</component>
+    <component name="Disable Lithium Battery" repeat-count="0">0</component>
+    <component name="Skip Ring/Finish SerPkt Protocol" repeat-count="0">0</component>
+    <component name="USB Configuration" repeat-count="0">0</component>
+    <component name="Reserved" repeat-count="0">0</component>
+  </setting>
+  <setting id="387" name="Goes Status">
+    <component name="Current Platform ID" repeat-count="0">&#10;</component>
+    <component name="Current transmitter date/time" repeat-count="0">&#10;</component>
+    <component name="Radio Operating Sytem Version" repeat-count="0">&#10;</component>
+    <component name="Current Battery Voltage" repeat-count="0">0</component>
+    <component name="Current Temperature (degrees C)" repeat-count="0">0</component>
+    <component name="Battery Voltage before last transmission" repeat-count="0">0</component>
+    <component name="Temperature before last transmit (degrees C)" repeat-count="0">0</component>
+    <component name="Battery voltage during last transmission" repeat-count="0">0</component>
+    <component name="GPS Latitude (-90.0 to +90.0)" repeat-count="0">0</component>
+    <component name="GPS Longitude (-180.0 to +180.0)" repeat-count="0">0</component>
+    <component name="Altitude of last GPS position (meters)" repeat-count="0">0</component>
+    <component name="Time of last GPS position fix" repeat-count="0">&#10;</component>
+    <component name="Number of missed GPS fixes" repeat-count="0">0</component>
+    <component name="Time of last missed GPS fix" repeat-count="0">&#10;</component>
+    <component name="GPS Aquisition Status" repeat-count="0">1</component>
+    <component name="GPS Antenna Status" repeat-count="0">0</component>
+    <component name="Failsafe tripped indicator" repeat-count="0">0</component>
+    <component name="Duration of last transmission (milliseconds)" repeat-count="0">0</component>
+    <component name="Forward RF power on last transmission (watts)" repeat-count="0">0</component>
+    <component name="Reflected RF power on last transmission (watts)" repeat-count="0">0</component>
+    <component name="VSWR" repeat-count="0">0</component>
+    <component name="Last transmission control flags" repeat-count="0">0</component>
+    <component name="Last transmission start time" repeat-count="0">&#10;</component>
+    <component name="Last transmission channel number" repeat-count="0">0</component>
+    <component name="Last transmission type code" repeat-count="0">0</component>
+    <component name="Last transmission data length (bytes)" repeat-count="0">0</component>
+    <component name="Last transmission GOES HDR flagword" repeat-count="0">0</component>
+    <component name="Last transmission result status" repeat-count="0">0</component>
+    <component name="Current transmit state" repeat-count="0">0</component>
+  </setting>
+  <setting id="150" name="TLS Status">
+    <component name="TLS Status" repeat-count="0">Not initialized&#10;</component>
+  </setting>
+  <setting id="144" name="Max TLS Server Connections">
+    <component name="Max TLS Server Connections" repeat-count="0">0</component>
+  </setting>
+  <setting id="145" name="TLS Private Key">
+    <component name="TLS Private Key" repeat-count="0" />
+  </setting>
+  <setting id="381" name="SFTP Public Key">
+    <component name="SFTP Public Key" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="383" name="SFTP Private Key">
+    <component name="SFTP Private Key" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="147" name="TLS Private Key Password">
+    <component name="TLS Private Key Password" repeat-count="0">&#10;</component>
+  </setting>
+  <setting id="146" name="TLS Certificate">
+    <component name="TLS Certificate" repeat-count="0" />
+  </setting>
+</device-config>
+
