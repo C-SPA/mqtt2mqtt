@@ -1,0 +1,87 @@
+'CR1000X Series Datalogger
+'CR1000x base station temperature and battery voltage monitoring
+'WGEW 4/11/2022
+                                                               
+'Declare Public Variables
+Public PTemp, batt_volt, LithiumBattery
+Public Lat = -110.91
+Public Lon = 32.25
+Public Elev = 728
+' DRF Vars from RS2
+Public PTemp_C
+' DRF END Vars from RS2
+                                                    
+'Define Remote MQTT Data Tables.
+' DRF Adding redundant table for sending to MQTT process
+DataTable (FiveMinuteRS2,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	Sample (1,batt_volt,FP2)
+	Sample (1,PTemp_C,FP2)
+	Sample (1,LithiumBattery,FP2)
+	Sample (1,Lat,FP2)
+	Sample (1,Lon,FP2)
+	Sample (1,Elev,FP2)
+	MQTTPublishTable (0,2,5,Min,2,Lon,Lat,Elev)
+EndTable
+' DRF END Adding redundant table for sending to MQTT process
+
+'Define Data Tables.
+DataTable (OneMinute,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	DataInterval (0,1,Min,10)
+	Sample (1,batt_volt,FP2)
+	Sample (1,PTemp,FP2)
+	Sample (1,LithiumBattery,FP2)
+
+EndTable
+
+DataTable (FiveMinute,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	DataInterval (0,5,Min,10)
+	Sample (1,batt_volt,FP2)
+	Sample (1,PTemp,FP2)
+	Sample (1,LithiumBattery,FP2)
+	Sample (1,Lat,FP2)
+	Sample (1,Lon,FP2)
+	Sample (1,Elev,FP2)
+	MQTTPublishTable (0,2,5,Min,1,Lon,Lat,Elev)
+EndTable
+
+
+DataTable (OneHour,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	DataInterval (0,1,Hr,10)
+	Average (1,batt_volt,FP2,False)
+	Average (1,PTemp,FP2,False)
+	Average (1,LithiumBattery,FP2,False)
+EndTable
+
+DataTable (OneDay,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	DataInterval (0,1,Day,10)
+	Minimum (1,batt_volt,FP2,False,True)
+	Maximum (1,PTemp,FP2,False,True)
+	Minimum (1,LithiumBattery,FP2,False,False)
+EndTable
+                                                                                                                      
+'Main Program
+BeginProg
+	Scan (30,Sec,0,0)
+		PanelTemp (PTemp,250)
+		Battery (batt_volt)
+		LithiumBattery = status.LithiumBattery
+		'Enter other measurement instructions
+		'Call Output Tables
+		'Example:
+    CallTable OneMinute
+		CallTable FiveMinute
+    CallTable OneHour
+    CallTable OneDay
+    If IfTime (0,1,Min) Then
+      SerialOpen (ComSDC7,115200,0,0,10000)
+      AcceptDataRecords (3002,32769,FiveMinuteRS2)
+      SerialClose (ComSDC7)
+    EndIf
+		'CallTable FiveMinuteRS2
+	NextScan
+EndProg
+
+                                                                                                                                                      
+																																					                                                                                                      
+																																																														                                                    
+																																																																											                                                  

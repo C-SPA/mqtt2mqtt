@@ -1,0 +1,119 @@
+'CR1000X Series
+'Created by Short Cut (4.4)
+'Program for Temperature/RH Sensor (CSI/Vaisala HMP45AC) and Thermocouple (CSI Type-T thermocouple).
+'Declare Variables and Units
+Public BattV
+Public batt_volt
+Public PTemp_C
+Public Temp_F
+Public AirTF
+Public RH
+Public LithiumBattery
+Public Lat = -111.91
+Public Lon = 32.25
+Public Elev = 750
+
+Units BattV=Volts
+Units batt_volt=Volts
+Units LithiumBattery=Volts
+Units PTemp_C=Deg C
+Units Temp_F=Deg F
+Units AirTF=Deg F
+Units RH=%
+
+'Define Data Tables
+DataTable(OneMinute,True,-1)
+	DataInterval(0,1,Min,10)
+	Sample(1,Temp_F,FP2)
+	Sample(1,AirTF,FP2)
+	Sample (1,RH,FP2)
+	Sample (1,BattV,FP2)
+	Sample (1,PTemp_C,FP2)
+EndTable
+
+DataTable (FiveMinute,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	DataInterval (0,5,Min,10)
+	Sample (1,batt_volt,FP2)
+	Sample (1,PTemp_C,FP2)
+	Sample (1,LithiumBattery,FP2)
+	Sample (1,Lat,FP2)
+	Sample (1,Lon,FP2)
+	Sample (1,Elev,FP2)
+  '	MQTTPublishTable (0,2,5,Min,2,Lon,Lat,Elev)
+EndTable
+
+' DRF Adding redundant table for sending to MQTT process
+DataTable (FiveMinuteRS2,1,-1) 'Set table size to # of records, or -1 to autoallocate.
+	DataInterval (0,5,Min,10)
+	Sample (1,batt_volt,FP2)
+	Sample (1,PTemp_C,FP2)
+	Sample (1,LithiumBattery,FP2)
+	Sample (1,Lat,FP2)
+	Sample (1,Lon,FP2)
+	Sample (1,Elev,FP2)
+EndTable
+' DRF END Adding redundant...
+
+DataTable(OneHour,True,-1)
+' DRF adding data interval as there are 2 mil records right now
+	DataInterval (0,1,Hr,10)
+' END DRF adding data interval as there are 2 mil records right now
+	Average(1,Temp_F,FP2,False)
+	Average(1,AirTF,FP2,False)
+	Average (1,RH,FP2,False)
+	Average (1,BattV,FP2,False)
+	Average (1,PTemp_C,FP2,False)
+EndTable
+
+DataTable(OneDay,True,-1)
+	DataInterval(0,1,Day,10)
+	Average(1,Temp_F,FP2,False)
+	Maximum(1,Temp_F,FP2,False,True)
+	Minimum(1,Temp_F,FP2,False,True)
+	Average(1,AirTF,FP2,False)
+	Maximum(1,AirTF,FP2,False,True)
+	Minimum(1,AirTF,FP2,False,True)
+	Average(1,RH,FP2,False)
+	Maximum(1,RH,FP2,False,True)
+	Minimum(1,RH,FP2,False,True)
+	Minimum (1,BattV,FP2,False,False)
+	Maximum (1,PTemp_C,FP2,False,False)
+	Minimum (1,LithiumBattery,FP2,False,False)
+
+EndTable
+
+'Main Program
+BeginProg
+	'Main Scan
+	Scan(1,Sec,30,0) 'DRF Updated to 30 seconds
+		'Default CR1000X Datalogger Battery Voltage measurement 'BattV'
+		Battery(BattV)
+    Battery(batt_volt)
+		'Default CR1000X Datalogger (internal battery) Lithium Battery Voltage measurement 'LithiumBattery'
+		LithiumBattery = status.LithiumBattery
+		'Default CR1000X Datalogger Wiring Panel Temperature measurement 'PTemp_C'
+		PanelTemp(PTemp_C,60)
+		'Type T Thermocouple measurements 'Temp_F'
+		TCDiff(Temp_F,1,mv200C,1,TypeT,PTemp_C,True,0,60,1.8,32)
+		'HMP45C (7-wire, cable switched power) Temperature & Relative Humidity Sensor measurements 'AirTF' and 'RH'
+		PortSet(C1,1)
+		Delay(0,150,mSec)
+		VoltSe(AirTF,1,mV1000,1,False,0,60,0.1,-40)
+		VoltSe(RH,1,mV1000,2,False,0,60,0.1,0)
+		PortSet(C1,0)
+		If RH>100 AND RH<108 Then RH=100
+		'Call Data Tables and Store Data
+		CallTable OneMinute
+		CallTable FiveMinute
+		CallTable FiveMinuteRS2
+		CallTable OneHour
+		CallTable OneDay
+		' DRF RF Send Data to Basestation
+    If IfTime (0,1,Min) Then
+      SerialOpen (ComSDC7,115200,0,0,10000)
+      SendData (ComSDC7,0,3001,FiveMinuteRS2)
+      SerialClose (ComSDC7)
+    EndIf
+    ' END DRF
+	NextScan
+EndProg
